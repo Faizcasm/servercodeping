@@ -31,12 +31,7 @@ database()
 })
 
 app.get('/',async(req,res)=>{
-    const {name}=req.body
-    const user=await Demo.create({
-        name:name
-    })
      res.send("i am also working")
-    return res.status(200).json({message:"We gOT it",user})
     })
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))

@@ -37,6 +37,7 @@ app.post('/check',async(req,res)=>{
     const user=await Demo.create({
         name:name
     })
+     res.send("i am also working")
     return res.status(200).json({message:"We gOT it",user})
     })
 app.use(express.json())

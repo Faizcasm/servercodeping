@@ -29,10 +29,8 @@ database()
 .catch(err=>{
     console.log(err);
 })
-app.get('/',(req,res)=>{
-res.send("Backend is up")
-})
-app.post('/check',async(req,res)=>{
+
+app.post('/',async(req,res)=>{
     const {name}=req.body
     const user=await Demo.create({
         name:name

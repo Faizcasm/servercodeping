@@ -30,7 +30,7 @@ database()
     console.log(err);
 })
 
-app.post('/',async(req,res)=>{
+app.get('/',async(req,res)=>{
     const {name}=req.body
     const user=await Demo.create({
         name:name

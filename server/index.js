@@ -10,6 +10,8 @@ const port =500;
 dotenv.config({
     path:'./.env'
 })
+const DemoSchema = new mongoose.Schema({name:String},{timestamps:true})
+const Demo = mongoose.model('demoo',DemoSchema)
 const database = async()=>{
     try {
         const connect = await mongoose.connect(`${process.env.url}/mooodmedia`)
@@ -30,6 +32,13 @@ database()
 app.get('/',(req,res)=>{
 res.send("Backend is up")
 })
+app.post('/check',async(req,res)=>{
+    const {name}=req.body
+    const user=await Demo.create({
+        name:name
+    })
+    return res.status(200).json({message:"We gOT it",user})
+    })
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(express.static("public"))

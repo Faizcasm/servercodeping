@@ -3,9 +3,9 @@ import fs from "fs"
 
 
 cloudinary.config({ 
-  cloud_name: dvqs8ferk, 
-  api_key: 542265677752876, 
-  api_secret: u2szMkJzkTy9qxnGe6D86E5nncg
+  cloud_name: 'dvqs8ferk', 
+  api_key: '542265677752876', 
+  api_secret: 'u2szMkJzkTy9qxnGe6D86E5nncg'
 });
 
 const uploadOnCloudinary = async (localFilePath) => {

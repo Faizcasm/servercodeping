@@ -40,7 +40,7 @@ app.use(express.static("public"))
 app.use(cookieParser())
 app.use('/', function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type');
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, image/svg+xml , Accept');
   next();
 });
 const options={

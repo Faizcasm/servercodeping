@@ -31,10 +31,10 @@ database()
 })
 
 app.get('/',async(req,res)=>{
-     res.send("i am also working")
+     res.send("Codeping server is up ")
     })
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
@@ -44,7 +44,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static("public"))
 app.use(cookieParser())
 const options={
-    origin:'*',
+    origin:'http://localhost:5173',
     credentials:true,
      methods: ["GET", "POST","PUT","DELETE"],
     allowedHeaders: ["my-custom-header"]

@@ -38,7 +38,8 @@ app.use(express.static("public"))
 app.use(cookieParser())
 app.use('/', function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, image/svg+xml , Accept');
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type , Accept');
+    res.header('Content-type','text/plain, application/octet-stream , application/json ,image/apng,image/avif')
   next();
 });
 const options={

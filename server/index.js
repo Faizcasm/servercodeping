@@ -8,9 +8,8 @@ const port =500;
 dotenv.config({
     path:'./.env'
 })
-const DemoSchema = new mongoose.Schema({name:String},{timestamps:true})
-const Demo = mongoose.model('demoo',DemoSchema)
-const database = async()=>{
+try{
+    const database = async()=>{
     try {
         const connect = await mongoose.connect(`${process.env.url}/mooodmedia`)
         console.log("connected ",connect.connection.host);
@@ -50,3 +49,7 @@ const options={
 app.use(cors(options))
 import router from './router.js'
 app.use('/',router)
+}catch(error){
+    console.log(error)
+}
+   

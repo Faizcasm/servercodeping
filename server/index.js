@@ -38,8 +38,10 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static("public"))
 app.use(cookieParser())
 const options={
-    origin:'http://localhost:5173',
-    credentials:true
+    origin:'https://codeping.vercel.app',
+    credentials:true,
+     methods: ["GET", "POST"],
+    allowedHeaders: ["my-custom-header"],
 }
 app.use(cors(options))
 import router from './router.js'

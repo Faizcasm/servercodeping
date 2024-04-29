@@ -38,7 +38,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static("public"))
 app.use(cookieParser())
 const options={
-    origin:'https://codeping.vercel.app',
+    origin:'https://codeping-f29eu4iyu-faizcasms-projects.vercel.app',
     credentials:true,
      methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],

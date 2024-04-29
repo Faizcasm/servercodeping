@@ -5,7 +5,7 @@ import mongoose from 'mongoose'
 import cookieParser from 'cookie-parser'
 import dotenv from 'dotenv'
 const app =express()
-const server = new createServer(app)
+const server = createServer(app)
 const port =500;
 dotenv.config({
     path:'./.env'

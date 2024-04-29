@@ -20,7 +20,7 @@ const database = async()=>{
 }
 database()
 .then(listen=>{
-    server.listen(port,()=>{
+    app.listen(port,()=>{
         console.log(port);
     })
 })

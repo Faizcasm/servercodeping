@@ -1,11 +1,9 @@
 import express from 'express'
 import cors from 'cors'
-import {createServer} from 'http'
 import mongoose from 'mongoose'
 import cookieParser from 'cookie-parser'
 import dotenv from 'dotenv'
 const app =express()
-const server = createServer(app)
 const port =500;
 dotenv.config({
     path:'./.env'
@@ -22,7 +20,7 @@ const database = async()=>{
 }
 database()
 .then(listen=>{
-    server.listen(port,()=>{
+    app.listen(port,()=>{
         console.log(port);
     })
 })

@@ -3,9 +3,7 @@ import cors from 'cors'
 import mongoose from 'mongoose'
 import cookieParser from 'cookie-parser'
 import dotenv from 'dotenv'
-import {createServer} from 'http'
 const app =express()
-const server = createServer(app)
 const port =500;
 dotenv.config({
     path:'./.env'

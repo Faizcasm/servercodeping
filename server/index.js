@@ -38,7 +38,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static("public"))
 app.use(cookieParser())
 const options={
-    origin:'http://localhost:500',
+    origin:'http://localhost:5173',
     credentials:true,
      methods: ["GET", "POST","PUT","DELETE"],
     allowedHeaders: ["http://localhost:500"],
